@@ -11,7 +11,7 @@ MCU = cortex-m4
 CUSTOM_MATRIX = yes
 
 # Build Options
-#   comment out to disable the options.
+#   comment out to disable the options.  
 #
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys

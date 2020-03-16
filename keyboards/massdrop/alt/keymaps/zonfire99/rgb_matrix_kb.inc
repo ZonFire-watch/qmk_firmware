@@ -11,9 +11,9 @@ RGB_MATRIX_EFFECT(RGB_CUSTOM_ZONFIRE_2)
 RGB_MATRIX_EFFECT(RGB_CUSTOM_ZONFIRE_WHITE)
 //RGB_MATRIX_EFFECT(my_cool_effect2)
 
-
-//root@ZonFires-MBP qmk_firmware # util/docker_build.sh massdrop/alt:default
-
+ 
+// qmk_firmware # util/docker_build.sh massdrop/alt:default
+  
 
 // Step 2.
 // Define effects inside the `RGB_MATRIX_CUSTOM_EFFECT_IMPLS` ifdef block

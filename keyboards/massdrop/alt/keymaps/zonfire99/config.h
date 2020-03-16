@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 copy to ../../../alt/config.h
 */
-
+ 
 #pragma once
 
 #include "config_common.h"
