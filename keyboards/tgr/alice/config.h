@@ -38,3 +38,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGBLED_NUM 18
 #define RGBLIGHT_ANIMATIONS
+
+#define NO_UART 1

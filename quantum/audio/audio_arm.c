@@ -218,11 +218,17 @@ static const dacsample_t dac_buffer_2[DAC_BUFFER_SIZE] = {
 /*
  * DAC streaming callback.
  */
-size_t      nz = 0;
-static void end_cb1(DACDriver *dacp) {
+size_t      nx = 0, ny = 0, nz = 0;
+static void end_cb1(DACDriver *dacp, dacsample_t *buffer, size_t n) {
     (void)dacp;
 
     nz++;
+    if (dac_buffer == buffer) {
+        nx += n;
+    } else {
+        ny += n;
+    }
+
     if ((nz % 1000) == 0) {
         // palTogglePad(GPIOD, GPIOD_LED3);
     }

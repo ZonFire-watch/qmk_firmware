@@ -81,8 +81,19 @@ __attribute__((weak)) bool is_keyboard_master(void) {
     return (usbstate == MASTER);
 }
 
+static void keyboard_master_setup(void) {
+#if defined(USE_I2C)
+#    ifdef SSD1306OLED
+    matrix_master_OLED_init();
+#    endif
+#endif
+    transport_master_init();
+}
+
+static void keyboard_slave_setup(void) { transport_slave_init(); }
+
 // this code runs before the keyboard is fully initialized
-void split_pre_init(void) {
+void keyboard_split_setup(void) {
     isLeftHand = is_keyboard_left();
 
 #if defined(RGBLIGHT_ENABLE) && defined(RGBLED_SPLIT)
@@ -95,18 +106,8 @@ void split_pre_init(void) {
 #endif
 
     if (is_keyboard_master()) {
-#if defined(USE_I2C) && defined(SSD1306OLED)
-        matrix_master_OLED_init();
-#endif
-        transport_master_init();
-    }
-}
-
-// this code runs after the keyboard is fully initialized
-//   - avoids race condition during matrix_init_quantum where slave can start
-//     receiving before the init process has completed
-void split_post_init(void) {
-    if (!is_keyboard_master()) {
-        transport_slave_init();
+        keyboard_master_setup();
+    } else {
+        keyboard_slave_setup();
     }
 }

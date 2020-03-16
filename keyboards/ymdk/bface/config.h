@@ -36,5 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DIODE_DIRECTION COL2ROW
 
+#define NO_UART 1
+
 #define BACKLIGHT_PIN       D4
 #define BACKLIGHT_LEVELS    6
