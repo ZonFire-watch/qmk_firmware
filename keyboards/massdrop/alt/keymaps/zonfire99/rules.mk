@@ -11,7 +11,7 @@ MCU = cortex-m4
 CUSTOM_MATRIX = yes
 
 # Build Options
-#   comment out to disable the options.  
+#   comment out to disable the options.
 #
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys
@@ -41,5 +41,5 @@ RGB_MATRIX_ENABLE = custom
 # Enable custom RGB effects
 RGB_MATRIX_CUSTOM_KB = yes
 
-
+#RGBLIGHT_LAYERS = yes
 LAYOUTS = 65_ansi_blocker

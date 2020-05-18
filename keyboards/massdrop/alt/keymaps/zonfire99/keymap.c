@@ -13,10 +13,10 @@ enum alt_keycodes {
 	L_BRD,
 };
 
-   
 
 
-  
+
+
 
 
 
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_65_ansi_blocker(
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_DEL,  \
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, KC_HOME, \
-        KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,  KC_PGUP, \
+        LT(TO(1), KC_CAPS), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          LT(TO(1), KC_ENT),  KC_PGUP, \
         KC_LSPO, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC,          KC_UP,   KC_PGDN, \
         KC_LCTL, KC_LALT, KC_LGUI,                           KC_SPC,                             KC_RALT, MO(1),   KC_LEFT, KC_DOWN, KC_RGHT  \
     ),
@@ -49,15 +49,47 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     */
 };
-
 // Runs just one time when the keyboard initializes.
 void matrix_init_user(void) {
 };
 
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
-};
+  /*    uint8_t layer = biton32(layer_state);
 
+    // INSERT CODE HERE: turn off all leds
+    rgb_matrix_set_flags(LED_FLAG_KEYLIGHT);
+    rgb_matrix_set_color_all(0, 0, 0);
+
+    switch (layer) {
+        case 0:
+            // INSERT CODE HERE: turn on leds that correspond to YOUR_LAYER_1
+            //rgb_matrix_set_color(70, 0xFF, 0x02, 0x69);
+            //rgb_matrix_set_color(78, 0xFF, 0x02, 0x69);
+            break;
+        case 1:
+            // INSERT CODE HERE: turn on leds that correspond to YOUR_LAYER_2
+
+            rgb_matrix_set_color(70, 0x52, 0x02, 0xFF);
+            rgb_matrix_set_color(78, 0x52, 0x02, 0xFF);
+            break;
+            // add case for each layer
+    }*/
+};
+/*
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        case 0:
+            //rgblight_setrgb(0x00, 0x00, 0xFF);
+            break;
+        case 1:
+            rgb_matrix_set_color(70, 0x00, 0x00, 0xFF);
+            rgb_matrix_set_color(78, 0x00, 0x00, 0xFF);
+            break;
+    }
+    return state;
+}
+*/
 #define MODS_SHIFT  (get_mods() & MOD_BIT(KC_LSHIFT) || get_mods() & MOD_BIT(KC_RSHIFT))
 #define MODS_CTRL  (get_mods() & MOD_BIT(KC_LCTL) || get_mods() & MOD_BIT(KC_RCTRL))
 #define MODS_ALT  (get_mods() & MOD_BIT(KC_LALT) || get_mods() & MOD_BIT(KC_RALT))
@@ -195,10 +227,10 @@ void rgb_matrix_indicators_user(void)
 		//} else {
 		//	rgb_matrix_set_color(13, 0xFF, 0xFF, 0xFF);
 		//}
-		
-        
-		
-		rgb_matrix_set_color(0, 0xFF, 0x00, 0x00); //row 1 
+
+
+
+		rgb_matrix_set_color(0, 0xFF, 0x00, 0x00); //row 1
 		rgb_matrix_set_color(1, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(2, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(3, 0x00, 0xFF, 0x00);
@@ -208,7 +240,7 @@ void rgb_matrix_indicators_user(void)
 		rgb_matrix_set_color(6, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(7, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(8, 0x00, 0xFF, 0x00);
-		
+
 		rgb_matrix_set_color(9, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(10, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(11, 0x00, 0xFF, 0x00);
@@ -218,7 +250,7 @@ void rgb_matrix_indicators_user(void)
 
 
 		rgb_matrix_set_color(15, 0xFF, 0x00, 0xFF); //row 2
-		rgb_matrix_set_color(16, 0x00, 0xFF, 0x00); 
+		rgb_matrix_set_color(16, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(17, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(18, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(19, 0x00, 0xFF, 0x00);
@@ -232,7 +264,7 @@ void rgb_matrix_indicators_user(void)
 		rgb_matrix_set_color(27, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(28, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(29, 0xFF, 0x00, 0xFF);
-		
+
 		//rgb_matrix_set_color(30, 0xFF, 0x00, 0xFF);//row 3
 		rgb_matrix_set_color(31, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(32, 0x00, 0xFF, 0x00);
@@ -269,23 +301,23 @@ void rgb_matrix_indicators_user(void)
 		rgb_matrix_set_color(61, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(62, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(63, 0xFF, 0x00, 0xFF);
-		
+
 		//arrow keys
 		rgb_matrix_set_color(56, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(64, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(65, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(66, 0x00, 0xFF, 0x00);
 		//arrow keys
-		
+
 		//edge corners
 		rgb_matrix_set_color(100, 0xFF, 0xFF, 0xFF);
 		rgb_matrix_set_color(86, 0xFF, 0xFF, 0xFF);
 		//rgb_matrix_set_color(67, 0x00, 0xFF, 0x00);
 		//rgb_matrix_set_color(81, 0x00, 0xFF, 0x00);
 		//edge corners
-		
 
-		
+
+
 		//front edge
 		rgb_matrix_set_color(68, 0xFF, 0xFF, 0xFF);
 		rgb_matrix_set_color(69, 0xFF, 0xFF, 0xFF);
@@ -301,21 +333,21 @@ void rgb_matrix_indicators_user(void)
 		rgb_matrix_set_color(79, 0xFF, 0xFF, 0xFF);
 		rgb_matrix_set_color(80, 0xFF, 0xFF, 0xFF);
 		//front edge
-		
+
 		//left edge
 		rgb_matrix_set_color(101, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(102, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(103, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(104, 0x00, 0xFF, 0x00);
 		//left edge
-		
+
 		//right edge
 		rgb_matrix_set_color(85, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(84, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(83, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(82, 0x00, 0xFF, 0x00);
 		//right edge
-		
+
 		//back edge
 		rgb_matrix_set_color(87, 0xFF, 0xFF, 0xFF);
 		rgb_matrix_set_color(88, 0xFF, 0xFF, 0xFF);

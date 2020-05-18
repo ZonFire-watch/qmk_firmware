@@ -1,3 +1,6 @@
+// copy to ../../../alt/rgb_matrix_kb.inc
+
+
 // !!! DO NOT ADD #pragma once !!! //
 
 // Step 1.
@@ -9,7 +12,7 @@ RGB_MATRIX_EFFECT(RGB_CUSTOM_ZONFIRE_WHITE)
 //RGB_MATRIX_EFFECT(my_cool_effect2)
 
 
-//root@ZonFires-MBP qmk_firmware # util/docker_build.sh massdrop/alt:default
+// qmk_firmware # util/docker_build.sh massdrop/alt:default
 
 
 // Step 2.
@@ -23,9 +26,9 @@ RGB_MATRIX_EFFECT(RGB_CUSTOM_ZONFIRE_WHITE)
 static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
   RGB_MATRIX_USE_LIMITS(led_min, led_max);
   for (uint8_t i = led_min; i < led_max; i++) {
-    
 
-        rgb_matrix_set_color(0, 0xFF, 0x00, 0xFF); //row 1 
+
+        rgb_matrix_set_color(0, 0xFF, 0x00, 0xFF); //row 1
 		rgb_matrix_set_color(1, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(2, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(3, 0xFF, 0x00, 0xFF);
@@ -35,7 +38,7 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 		rgb_matrix_set_color(6, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(7, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(8, 0xFF, 0x00, 0xFF);
-		
+
 		rgb_matrix_set_color(9, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(10, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(11, 0xFF, 0x00, 0xFF);
@@ -45,7 +48,7 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 
 
 		rgb_matrix_set_color(15, 0xFF, 0x00, 0xFF); //row 2
-		rgb_matrix_set_color(16, 0x00, 0xFF, 0xFF); 
+		rgb_matrix_set_color(16, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(17, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(18, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(19, 0x00, 0xFF, 0xFF);
@@ -59,7 +62,7 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 		rgb_matrix_set_color(27, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(28, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(29, 0xFF, 0x00, 0xFF);
-		
+
 		rgb_matrix_set_color(30, 0xFF, 0x00, 0xFF);//row 3
 		rgb_matrix_set_color(31, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(32, 0x00, 0xFF, 0xFF);
@@ -96,23 +99,23 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 		rgb_matrix_set_color(61, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(62, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(63, 0xFF, 0x00, 0xFF);
-		
+
 		//arrow keys
 		rgb_matrix_set_color(56, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(64, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(65, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(66, 0xFF, 0x00, 0xFF);
 		//arrow keys
-		
+
 		//edge corners
 		rgb_matrix_set_color(100, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(86, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(67, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(81, 0x00, 0xFF, 0x00);
 		//edge corners
-		
 
-		
+
+
 		//front edge
 		rgb_matrix_set_color(68, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(69, 0x00, 0xFF, 0x00);
@@ -128,21 +131,21 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 		rgb_matrix_set_color(79, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(80, 0x00, 0xFF, 0x00);
 		//front edge
-		
+
 		//left edge
 		rgb_matrix_set_color(101, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(102, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(103, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(104, 0x00, 0xFF, 0x00);
 		//left edge
-		
+
 		//right edge
 		rgb_matrix_set_color(85, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(84, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(83, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(82, 0x00, 0xFF, 0x00);
 		//right edge
-		
+
 		//back edge
 		rgb_matrix_set_color(87, 0x00, 0xFF, 0x00);
 		rgb_matrix_set_color(88, 0x00, 0xFF, 0x00);
@@ -167,11 +170,11 @@ static bool RGB_CUSTOM_ZONFIRE(effect_params_t* params) {
 
 
 
-
+/*
 static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
   RGB_MATRIX_USE_LIMITS(led_min, led_max);
   for (uint8_t i = led_min; i < led_max; i++) {
-    
+
 
         rgb_matrix_set_color(0, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(1, 0xFF, 0x00, 0xFF);
@@ -183,7 +186,7 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(6, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(7, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(8, 0xFF, 0x00, 0xFF);
-		
+
 		rgb_matrix_set_color(9, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(10, 0xFF, 0x00, 0xFF);
 		rgb_matrix_set_color(11, 0xFF, 0x00, 0xFF);
@@ -207,7 +210,7 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(27, 0xBF, 0x40, 0xFF);
 		rgb_matrix_set_color(28, 0xBF, 0x40, 0xFF);
 		rgb_matrix_set_color(29, 0xBF, 0x40, 0xFF);
-		
+
 		rgb_matrix_set_color(30, 0x80, 0x80, 0xFF);
 		rgb_matrix_set_color(31, 0x80, 0x80, 0xFF);
 		rgb_matrix_set_color(32, 0x80, 0x80, 0xFF);
@@ -224,17 +227,17 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(43, 0x80, 0x80, 0xFF);
 
 		rgb_matrix_set_color(44, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(45, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(46, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(47, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(48, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(49, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(50, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(51, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(52, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(53, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(54, 0x40, 0xBF, 0xFF);
-		rgb_matrix_set_color(55, 0x40, 0xBF, 0xFF);
+		rgb_matrix_set_color(45, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(46, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(47, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(48, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(49, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(50, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(51, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(52, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(53, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(54, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(55, 0x23, 0x01, 0x6F);
 		rgb_matrix_set_color(56, 0x40, 0xBF, 0xFF);
 
 		rgb_matrix_set_color(57, 0x00, 0xFF, 0xFF);
@@ -244,14 +247,14 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(61, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(62, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(63, 0x00, 0xFF, 0xFF);
-		
+
 		//arrow keys
 		//rgb_matrix_set_color(56, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(64, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(65, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(66, 0x00, 0xFF, 0xFF);
 		//arrow keys
-		
+
 		//edge corners
 		rgb_matrix_set_color(100, 0xFF, 0x00, 0xFF);//left
 		rgb_matrix_set_color(86, 0xFF, 0x00, 0xFF);//right
@@ -259,9 +262,9 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(67, 0x00, 0xFF, 0xFF);//left
 		rgb_matrix_set_color(81, 0x00, 0xFF, 0xFF);//right
 		//edge corners
-		
 
-		
+
+
 		//front edge
 		rgb_matrix_set_color(68, 0x00, 0xFF, 0xFF);//LEFT
 		rgb_matrix_set_color(69, 0x00, 0xFF, 0xFF);
@@ -277,21 +280,168 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 		rgb_matrix_set_color(79, 0x00, 0xFF, 0xFF);
 		rgb_matrix_set_color(80, 0x00, 0xFF, 0xFF);//RIGHT
 		//front edge
-		
+
 		//left edge
 		rgb_matrix_set_color(101, 0xCC, 0x33, 0xFF);//TOP
 		rgb_matrix_set_color(102, 0x99, 0x66, 0xFF);
 		rgb_matrix_set_color(103, 0x66, 0x99, 0xFF);
 		rgb_matrix_set_color(104, 0x33, 0xCC, 0xFF);//BOTTOM
 		//left edge
-		
+
 		//right edge
 		rgb_matrix_set_color(85, 0xCC, 0x33, 0xFF);//TOP
 		rgb_matrix_set_color(84, 0x99, 0x66, 0xFF);
 		rgb_matrix_set_color(83, 0x66, 0x99, 0xFF);
 		rgb_matrix_set_color(82, 0xCC, 0xCC, 0xFF);//BOTTOM
 		//right edge
-		
+
+		//back edge
+		rgb_matrix_set_color(87, 0xFF, 0x00, 0xFF);//RIGHT
+		rgb_matrix_set_color(88, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(89, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(90, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(91, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(92, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(93, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(94, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(95, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(96, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(97, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(98, 0xFF, 0x00, 0xFF);
+		rgb_matrix_set_color(99, 0xFF, 0x00, 0xFF);//LEFT
+		//back edge
+
+        //rgb_matrix_set_color(i, 0xff, 0xff, 0x00);
+  }
+  return led_max < DRIVER_LED_TOTAL;
+}
+*/
+
+
+static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
+  RGB_MATRIX_USE_LIMITS(led_min, led_max);
+  for (uint8_t i = led_min; i < led_max; i++) {
+
+
+        rgb_matrix_set_color(0, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(1, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(2, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(3, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(4, 0xFF, 0xEB, 0x00);
+
+		rgb_matrix_set_color(5, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(6, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(7, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(8, 0xFF, 0xEB, 0x00);
+
+		rgb_matrix_set_color(9, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(10, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(11, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(12, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(13, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(14, 0xFF, 0x13, 0x71);
+
+
+		rgb_matrix_set_color(15, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(16, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(17, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(18, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(19, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(20, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(21, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(22, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(23, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(24, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(25, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(26, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(27, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(28, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(29, 0xFF, 0x13, 0x71);
+
+		rgb_matrix_set_color(30, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(31, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(32, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(33, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(34, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(35, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(36, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(37, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(38, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(39, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(40, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(41, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(42, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(43, 0xFF, 0x13, 0x71);
+
+		rgb_matrix_set_color(44, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(45, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(46, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(47, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(48, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(49, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(50, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(51, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(52, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(53, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(54, 0x23, 0x01, 0x6F);
+		rgb_matrix_set_color(55, 0x23, 0x01, 0x6F);
+		//rgb_matrix_set_color(56, 0xFF, 0x13, 0x71);
+        rgb_matrix_set_color(57, 0xFF, 0x13, 0x71);
+
+		rgb_matrix_set_color(58, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(59, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(60, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(61, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(62, 0xFF, 0x13, 0x71);
+		rgb_matrix_set_color(63, 0xFF, 0x13, 0x71);
+
+		//arrow keys
+		rgb_matrix_set_color(56, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(64, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(65, 0xFF, 0xEB, 0x00);
+		rgb_matrix_set_color(66, 0xFF, 0xEB, 0x00);
+		//arrow keys
+
+		//edge corners
+		rgb_matrix_set_color(100, 0xD4, 0x24, 0x50);//left
+		rgb_matrix_set_color(86, 0xD4, 0x24, 0x50);//right
+
+		rgb_matrix_set_color(67, 0xD4, 0x24, 0x50);//left
+		rgb_matrix_set_color(81, 0xD4, 0x24, 0x50);//right
+		//edge corners
+
+
+
+		//front edge
+		rgb_matrix_set_color(68, 0xD4, 0x24, 0x50);//LEFT
+		rgb_matrix_set_color(69, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(70, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(71, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(72, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(73, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(74, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(75, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(76, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(77, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(78, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(79, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(80, 0xD4, 0x24, 0x50);//RIGHT
+		//front edge
+
+		//left edge
+		rgb_matrix_set_color(101, 0xD4, 0x24, 0x50);//TOP
+		rgb_matrix_set_color(102, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(103, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(104, 0xD4, 0x24, 0x50);//BOTTOM
+		//left edge
+
+		//right edge
+		rgb_matrix_set_color(85, 0xD4, 0x24, 0x50);//TOP
+		rgb_matrix_set_color(84, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(83, 0xD4, 0x24, 0x50);
+		rgb_matrix_set_color(82, 0xD4, 0x24, 0x50);//BOTTOM
+		//right edge
+
 		//back edge
 		rgb_matrix_set_color(87, 0xFF, 0x00, 0xFF);//RIGHT
 		rgb_matrix_set_color(88, 0xFF, 0x00, 0xFF);
@@ -314,12 +464,13 @@ static bool RGB_CUSTOM_ZONFIRE_2(effect_params_t* params) {
 }
 
 
+
 static bool RGB_CUSTOM_ZONFIRE_WHITE(effect_params_t* params) {
   RGB_MATRIX_USE_LIMITS(led_min, led_max);
   for (uint8_t i = led_min; i < led_max; i++) {
-    
+
 	  rgb_matrix_set_color_all(255, 255, 255);
-        
+
   }
   return led_max < DRIVER_LED_TOTAL;
 }

@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 copy to ../../../alt/config.h
 */
- 
+
 #pragma once
 
 #include "config_common.h"
@@ -131,6 +131,7 @@ copy to ../../../alt/config.h
 
 #define BACKLIGHT_CAPS_LOCK 30
 // rgb config
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CUSTOM_RGB_CUSTOM_ZONFIRE
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CUSTOM_RGB_CUSTOM_MITO_LASER_2
+//#define RGBLIGHT_LAYERS
 
 #include "config_led.h"
